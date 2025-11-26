@@ -1,9 +1,7 @@
 # BachIAndo
 
 ## Proyecto para devChallenge 2025 por DuranIA
-
 ---
-
 ### Equipo: Eznihcitos
 
 ### Integrantes:
