@@ -1,6 +1,6 @@
 # BachApp
 
-## Proyecto para devChallenge 2025 por DuranIA
+## Proyecto para devCode Challenge 2025 por DuranIA
 ---
 ### Equipo: Eznihcitos
 
