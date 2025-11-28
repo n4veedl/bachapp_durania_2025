@@ -1,4 +1,3 @@
-import 'dart:convert' as convert;
 
 class ReportModel {
   late String id;
@@ -35,12 +34,12 @@ class ReportModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = this.id;
-    data['location'] = this.location;
-    data['severity'] = this.severity.index;
-    data['description'] = this.description;
-    data['images'] = this.images;
-    data['created_at'] = this.createdAt;
+    data['id'] = id;
+    data['location'] = location;
+    data['severity'] = severity.index;
+    data['description'] = description;
+    data['images'] = images;
+    data['created_at'] = createdAt;
     return data;
   }
 

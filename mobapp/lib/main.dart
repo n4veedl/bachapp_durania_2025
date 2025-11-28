@@ -9,26 +9,18 @@ import 'package:DIAPotholeReporter1/utils/sqlite_handler.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_map_pmtiles/flutter_map_pmtiles.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:mbtiles/mbtiles.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_mbtiles/flutter_map_mbtiles.dart';
 import 'package:vector_map_tiles_pmtiles/vector_map_tiles_pmtiles.dart';
 import 'package:vector_tile_renderer/vector_tile_renderer.dart' as vtr;
 import 'package:latlong2/latlong.dart';
 
-import 'package:DIAPotholeReporter1/blocs/RouteGroups/route_groups_bloc.dart';
 import 'package:DIAPotholeReporter1/blocs/map_toggle_cubit.dart';
-import 'package:DIAPotholeReporter1/pages/RouteGroupsPage.dart';
-import 'package:vector_map_tiles/vector_map_tiles.dart';
-import 'package:vector_map_tiles_mbtiles/vector_map_tiles_mbtiles.dart';
 
-import 'blocs/Routes/route_bloc.dart';
 import 'blocs/map_controller_cubit.dart';
 
 Future main() async {

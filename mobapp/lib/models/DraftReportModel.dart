@@ -1,4 +1,3 @@
-import 'dart:convert' as convert;
 
 class DraftReportModel {
   String? location;
@@ -43,17 +42,17 @@ class DraftReportModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['location'] = this.location;
-    data['lat'] = this.lat;
-    data['lon'] = this.lon;
-    data['severity'] = this.severity;
-    data['description'] = this.description;
-    data['images'] = this.images;
-    data['isInLocation'] = this.isInLocation;
-    data['currentLat'] = this.currentLat;
-    data['currentLon'] = this.currentLon;
-    data['anonymous'] = this.anonymous;
-    data['userId'] = this.userId;
+    data['location'] = location;
+    data['lat'] = lat;
+    data['lon'] = lon;
+    data['severity'] = severity;
+    data['description'] = description;
+    data['images'] = images;
+    data['isInLocation'] = isInLocation;
+    data['currentLat'] = currentLat;
+    data['currentLon'] = currentLon;
+    data['anonymous'] = anonymous;
+    data['userId'] = userId;
     return data;
   }
 

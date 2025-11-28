@@ -48,6 +48,7 @@ dependencies:
   mbtiles: ^0.4.0
   flutter_bloc: ^8.1.6
   flutter_dotenv: ^5.2.1
+  image_picker: ^1.0.7
   path_provider: ^2.1.5
   sqflite: ^2.4.1
   path: ^1.9.0

@@ -40,14 +40,14 @@ class RouteGroupModel {
 
     Map<String, dynamic> toJson() {
         final Map<String, dynamic> data = <String, dynamic>{};
-        data['id'] = this.id;
+        data['id'] = id;
         // data['city_id'] = this.cityId;
-        data['name'] = this.name;
-        data['description'] = this.description;
-        data['version'] = this.version;
-        data['colors'] = this.colors;
-        data['routes'] = this.routes;
-        data['deleted_at'] = this.deletedAt;
+        data['name'] = name;
+        data['description'] = description;
+        data['version'] = version;
+        data['colors'] = colors;
+        data['routes'] = routes;
+        data['deleted_at'] = deletedAt;
         return data;
     }
 

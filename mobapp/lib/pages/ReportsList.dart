@@ -21,33 +21,35 @@ class ReportsListPage extends StatelessWidget {
               case ReportsLoaded:
                 if ((state as ReportsLoaded).reports.isEmpty) {
                   // add a warning icon
-                  return const NewReportButton();
+                  return const NewReportButton(empty: true,);
                 }
                 return Center(
                   child: Column(
                     children: [
                       ListView.builder(
                       shrinkWrap: true,
-                      itemCount: (state as ReportsLoaded).reports.length,
+                      itemCount: (state).reports.length,
                       itemBuilder: (context, index) {
                       return Card(
                       child: ListTile(
-                      title: Text((state as ReportsLoaded)
+                      title: Text((state)
                           .reports[index]
                           .createdAt
                           .toString())));
                       }),
-                      const NewReportButton()
+                      const NewReportButton(empty: false)
                   ]),
                 );
 
               case ReportsError:
                 return const Center(child: Text('Error cargando reportes'));
               case ReportsLoading:
-              default:
                 return const SizedBox(
                     height: 100, child: Center(child: CircularProgressIndicator( color: Colors.blueGrey)
                 ));
+              default:
+                print(state.runtimeType);
+                return const Text('Error cargando reportes');
             }
           })
         ]));
@@ -57,7 +59,10 @@ class ReportsListPage extends StatelessWidget {
 class NewReportButton extends StatelessWidget {
   const NewReportButton({
     super.key,
+    this.empty = true,
   });
+
+  final bool empty;
 
   @override
   Widget build(BuildContext context) {
@@ -65,20 +70,22 @@ class NewReportButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
-            Icons.warning_amber_rounded,
-            color: Colors.grey[800],
-            size: 50,
-          ),
-          const Text(
-            'No hay reportes',
-            style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 5,),
-          const Text(
-            'Ayuda a la comunidad reportando un bache',
-            style: TextStyle(color: Colors.grey, fontSize: 16),
-          ),
+          empty ? Column(children: [
+            Icon(
+              Icons.warning_amber_rounded,
+              color: Colors.grey[800],
+              size: 50,
+            ),
+            const Text(
+              'No hay reportes',
+              style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 5,),
+            const Text(
+              'Ayuda a la comunidad reportando un bache',
+              style: TextStyle(color: Colors.grey, fontSize: 16),
+            ),
+          ]) : Container(),
           const SizedBox(height: 15,),
           // add a button to go to the report page
           ElevatedButton(

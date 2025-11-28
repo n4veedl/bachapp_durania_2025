@@ -1,5 +1,4 @@
 
-import 'dart:convert' as convert;
 
 class RouteModel {
     late String id;
@@ -22,12 +21,12 @@ class RouteModel {
 
     Map<String, dynamic> toJson() {
         final Map<String, dynamic> data = <String, dynamic>{};
-        data['id'] = this.id;
-        data['name'] = this.name;
-        data['description'] = this.description;
-        data['version'] = this.version;
-        data['route'] = this.route;
-        data['deleted_at'] = this.deletedAt;
+        data['id'] = id;
+        data['name'] = name;
+        data['description'] = description;
+        data['version'] = version;
+        data['route'] = route;
+        data['deleted_at'] = deletedAt;
         return data;
     }
 
